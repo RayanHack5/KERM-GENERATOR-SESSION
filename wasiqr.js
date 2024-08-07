@@ -56,14 +56,14 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id, { text: 'SASAKI-MD;;;' + b64data });
+				   let session = await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id, { text: 'KERM-MD;;;' + b64data });
 	
 				   let WASI_MD_TEXT = `
-*_Session Connected By TOGE SASAKI_*
+*_Session Connected By RAYAN KERM_*
 *_Made With 🛠️_*
 ______________________________________
 ╔════◇
-║ *『AMAZING YOU'VE CHOSEN SASAKI MD』*
+║ *『AMAZING YOU'VE CHOSEN KERM MD』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚════════════════════════╝`
 	 await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id,{text:WASI_MD_TEXT},{quoted:session})
